@@ -1,0 +1,53 @@
+@import "../../styles/utilities/variables";
+
+.movies {
+
+    &__welcome {
+        background: url("../../assets/welcome.png") no-repeat center;
+        text-align: center;
+        color: $color-1;
+        padding: 52px 29px 142px 29px;
+        display: flex;
+        flex-direction: column;
+        height: 365px;
+
+        &--title {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        &--text {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: left;
+            line-height: 32px;
+            white-space: pre-line;
+        }
+    }
+
+    &__join {
+        background: url("../../assets/join.png") no-repeat center;
+        text-align: center;
+        color: $color-1;
+        padding: 52px 29px 142px 29px;
+        display: flex;
+        flex-direction: column;
+        height: 375px;
+
+        &--title {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        &--text {
+            font-size: 16px;
+            text-align: left;
+            line-height: 23px;
+            white-space: pre-line;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import "../../styles/utilities/variables";
+
+.showroom-cast {
+  padding: 50px 15px 22px 15px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-top: 25px;
+  }
+
+  &__actor-card{
+    width: 120px;
+  }
+
+  &__more {
+    margin: 0px auto;
+    text-align: center;
+  }
+
+  &__load {
+    margin: 20px 0px;
+    background-color: $color-3;
+    cursor: pointer;
+    color: $color-1;
+    font-size: 14px;
+    width: 103px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+  }
+
+  &__actor-card{
+    width: 130px;
+    margin-bottom: 25px;
+  }
+}

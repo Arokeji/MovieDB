@@ -1,0 +1,26 @@
+@import "../../styles/utilities/variables";
+
+.card-actor {
+
+  &__name {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+
+  &__character {
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px;
+    text-decoration: none;
+  }
+
+  &__image {
+    width: 130px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}

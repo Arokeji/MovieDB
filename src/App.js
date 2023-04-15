@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import React, { createContext, useEffect, useState } from "react";
+import { IntlProvider } from "react-intl";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import English from "./lang/en.json";
+import Spanish from "./lang/es.json";
+import HeaderBar from "./components/HeaderBar/HeaderBar";
+import MoviesPage from "./pages/MoviesPage/MoviesPage";
+import FooterBar from "./components/FooterBar/FooterBar";
+import MovieDataPage from "./pages/MovieDataPage/MovieDataPage";
+import TvShowDataPage from "./pages/TvShowDataPage/TvShowDataPage";
+import QuizzPage from "./pages/QuizzPage/QuizzPage";
+
+// Contexts
+export const LanguageSelector = createContext();
 
 function App() {
+  // States
+  const [locale, setLocale] = useState(navigator.language);
+  const [messages, setMessages] = useState(English);
+
+  useEffect(() => {
+    switch (locale) {
+      case "es-ES":
+        setMessages(Spanish);
+        break;
+      default:
+        setMessages(English);
+    }
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <LanguageSelector.Provider value={{ language: locale, setLanguage: setLocale }}>
+        <IntlProvider messages={messages} locale={locale}>
+          <HashRouter>
+            <HeaderBar></HeaderBar>
+            <Routes>
+              <Route path="/" element={<MoviesPage></MoviesPage>}></Route>
+              <Route path="/movie/:movieId" element={<MovieDataPage></MovieDataPage>}></Route>
+              <Route path="/tvshow/:showId" element={<TvShowDataPage></TvShowDataPage>}></Route>
+              <Route path="/quizz/" element={<QuizzPage></QuizzPage>}></Route>
+            </Routes>
+            <FooterBar></FooterBar>
+          </HashRouter>
+        </IntlProvider>
+      </LanguageSelector.Provider>
     </div>
   );
 }

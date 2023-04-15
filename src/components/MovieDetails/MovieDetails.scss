@@ -1,0 +1,84 @@
+@import "../../styles/utilities/variables";
+
+.movie {
+  background-color: $color-3;
+  color: $color-1;
+  padding: 22px 15px 45px 15px;
+  font-size: 12px;
+
+  &__poster {
+    margin: 0px auto;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__image {
+    width: 250px;
+    border-radius: 10px;
+  }
+
+  &__info {
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+
+  &__score {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__rating {
+    display: flex;
+    border-radius: 100%;
+    width: 46px;
+    height: 46px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 3px solid var(--color-percentage);
+  }
+
+  &__value {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  &__rating-text {
+    padding-left: 30px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  &__tagline {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  &__overview {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  &__overview-text {
+    line-height: 20px;
+  }
+
+  &__cast-name {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  &__cast-jobs {
+    font-weight: bold;
+    margin-top: 5px;
+  }
+}

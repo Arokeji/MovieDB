@@ -1,0 +1,64 @@
+@import "../../styles/utilities/variables";
+
+.showroom-tv-recommended {
+  padding: 50px 15px 22px 15px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 25px;
+  }
+
+  &__item-card{
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    margin-bottom: 10px;
+  }
+
+  &__info{
+    min-width: 100%;
+    margin-top: 15px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__image{
+    min-width: 100%;
+    border-radius: 10px;
+  }
+
+  &__name{
+    
+  }
+
+  &__rating{
+    margin-left: 20px;
+  }
+
+  &__more {
+    margin: 0px auto;
+    text-align: center;
+  }
+
+  &__load {
+    margin: 20px 0px;
+    background-color: $color-3;
+    cursor: pointer;
+    color: $color-1;
+    font-size: 14px;
+    width: 103px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+  }
+}

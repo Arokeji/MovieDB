@@ -1,0 +1,30 @@
+@import "../../styles/utilities/variables";
+
+.previews {
+  background-color: $color-3;
+  padding: 30px 20px;
+  color: $color-1;
+
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__more {
+    margin: 0px auto;
+    text-align: center;
+  }
+
+  &__load {
+    margin: 50px 0px;
+    background-color: $color-1;
+    cursor: pointer;
+    color: $color-3;
+    font-size: 14px;
+    width: 103px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+  }
+}

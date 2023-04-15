@@ -1,0 +1,65 @@
+@import "../../styles/utilities/variables";
+
+.header {
+  background-color: $color-3;
+  color: $color-1;
+  display: flex;
+  justify-content: space-between;
+  padding: 23px 8px 23px 20px;
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo {
+    width: 162px;
+    height: 21px;
+  }
+
+  &__options {
+      margin-top: 20px;
+  }
+
+  &__link {
+    color: $color-1;
+    margin-top: 22px;
+    margin-right: 22px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &--selected {
+      color: $color-1;
+      margin-top: 22px;
+      margin-right: 22px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: underline;
+      cursor: default;
+    }
+  }
+
+  &__language {
+  }
+
+  &__country {
+    background-color: transparent;
+    border: none;
+    color: $color-1;
+    padding: 3px 7px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &--selected {
+      background-color: $color-1;
+      border: none;
+      color: $color-3;
+      padding: 3px 7px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import "../../styles/utilities/variables";
+
+.footer {
+    background-color: $color-3;
+    text-align: center;
+    padding: 52px 0px 46px 0px;
+
+    &__logo {
+        width: 150px;
+        height: 108px;
+    }
+}
