@@ -11,7 +11,7 @@ const QuizzGame = ({ movieData }) => {
   const [randomMovies, setRandomMovies] = useState([]);
   const [randomCorrect, setRandomCorrect] = useState();
   const [selectedOption, setSelectedOption] = useState();
-  const [resolved, setResolved] = useState();
+  const [resolved, setResolved] = useState("no");
 
   // Selecciona 4 películas aleatorias y actualiza el estado del array
   const selectRandomMovies = () => {
@@ -38,9 +38,9 @@ const QuizzGame = ({ movieData }) => {
       <>
         <div className="quizz__game">
           <div className="quizz__poster">
-            <img className={resolved ? "quizz__image-quizz--solved" : "quizz__image-quizz"} src={`https://image.tmdb.org/t/p/w300/${randomMovies[randomCorrect]?.poster_path}`} alt={randomMovies[randomCorrect]?.title} />
+            <img className={resolved === true ? "quizz__image-quizz--solved" : "quizz__image-quizz"} src={`https://image.tmdb.org/t/p/w300/${randomMovies[randomCorrect]?.poster_path}`} alt={randomMovies[randomCorrect]?.title} />
           </div>
-          <h2 className="quizz__title">{resolved ? randomMovies[randomCorrect]?.title : "???"}</h2>
+          <h2 className="quizz__title">{resolved === true ? randomMovies[randomCorrect]?.title : "???"}</h2>
           <p className="quizz__info">
             {new Date(randomMovies[randomCorrect]?.release_date).toLocaleDateString(language, { year: "numeric", month: "short", day: "numeric" })} ({language.slice(3)})
           </p>
@@ -59,8 +59,9 @@ const QuizzGame = ({ movieData }) => {
               return (
                 <div key={movie.id}>
                   <button
-                    className={selectedOption === index ? "quizz__button--selected" : "quizz__button"}
+                    className={selectedOption === index ? (resolved === true ? "quizz__button--selected--correct" : (resolved === "no" ? "quizz__button--selected" : "quizz__button--selected--incorrect")) : "quizz__button"}
                     onClick={() => {
+                      setResolved("no");
                       setSelectedOption(index);
                     }}
                   >

@@ -129,6 +129,54 @@
       padding: 10px;
       margin: 5px 0px;
       color: $color-1;
+
+      &--correct {
+        width: 100%;
+        background-color: green;
+        font-size: 14px;
+        border: 2px solid green;
+        border-radius: 50px;
+        padding: 10px;
+        margin: 5px 0px;
+        color: $color-1;
+        animation-name: correct-transition;
+        animation-duration: 0.5s; /* duración de la animación en segundos */
+        animation-fill-mode: forwards; /* se mantiene el valor final de la animación después de terminar */
+      }
+
+      @keyframes correct-transition {
+        from {
+          background-color: white; /* color de fondo inicial */
+        }
+
+        to {
+          background-color: green; /* color de fondo final */
+        }
+      }
+
+      &--incorrect {
+        width: 100%;
+        background-color: red;
+        font-size: 14px;
+        border: 2px solid red;
+        border-radius: 50px;
+        padding: 10px;
+        margin: 5px 0px;
+        color: $color-1;
+        animation-name: incorrect-transition;
+        animation-duration: 0.5s; /* duración de la animación en segundos */
+        animation-fill-mode: forwards; /* se mantiene el valor final de la animación después de terminar */
+      }
+
+      @keyframes incorrect-transition {
+        from {
+          background-color: white; /* color de fondo inicial */
+        }
+
+        to {
+          background-color: red; /* color de fondo final */
+        }
+      }
     }
   }
 
