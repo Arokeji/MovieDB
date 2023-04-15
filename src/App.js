@@ -11,7 +11,7 @@ import MovieDataPage from "./pages/MovieDataPage/MovieDataPage";
 import TvShowDataPage from "./pages/TvShowDataPage/TvShowDataPage";
 import QuizzPage from "./pages/QuizzPage/QuizzPage";
 
-// Contexts
+// Context
 export const LanguageSelector = createContext();
 
 function App() {
