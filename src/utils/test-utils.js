@@ -8,7 +8,7 @@ import { LanguageSelector } from "../App";
 // eslint-disable-next-line no-undef
 const setLocale = jest.fn();
 
-function customTestingRender(ui, { locale = "es", ...renderOptions } = {}) {
+function customTestingRender(ui, { locale = "ES", ...renderOptions } = {}) {
   function Wrapper({ children }) {
     return (
       <LanguageSelector.Provider value={{ language: locale, setLanguage: setLocale }}>
